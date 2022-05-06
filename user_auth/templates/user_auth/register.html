@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register Page</title>
+    </head>
+    <body>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <!-- {{ form }} -->
+            <!-- <table>
+                {{ form.as_table }}
+                {{ form.as_p }}
+                {{ form.as_ul }}
+            </table> -->
+
+            <table>
+                <tr>
+                    <th>
+                        <label for="{{ form.username.id_for_label }}">User:</label>
+                    </th>
+                    <td>
+                        {{ form.username }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="{{ form.password.if_for_label }}">Password:</label>
+                    </th>
+                    <td>
+                        {{ form.password }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="{{ form.email.id_for_label}}">Email:</label>
+                    </th>
+                    <td>
+                        {{ form.email }}
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+
+</html>
